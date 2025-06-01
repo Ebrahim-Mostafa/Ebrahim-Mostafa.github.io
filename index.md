@@ -5,7 +5,7 @@ title: Ebrahim Mostafa | Senior SDET
 
 <!-- Background Music (Hidden) -->
 <div style="display:none">
-  <iframe id="backgroundMusic" width="0" height="0" src="https://www.youtube.com/embed/nHDlG7Gjs?start=22&autoplay=1&loop=1&playlist=nHDlG7Gjs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe id="backgroundMusic" width="0" height="0" src="https://www.youtube.com/watch?v=nHDlG3G7Gjs&t=22s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
 <div class="header-container">
