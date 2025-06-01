@@ -24,6 +24,39 @@ title: Ebrahim Mostafa | Senior SDET
   </div>
 </div>
 
+<!-- Add this at the bottom of your file, just before the closing </div> of the contact form section -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const musicToggle = document.getElementById('musicToggle');
+    let player = null;
+    
+    musicToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (!player) {
+        // Create player if it doesn't exist
+        player = document.createElement('iframe');
+        player.width = "0";
+        player.height = "0";
+        player.style.display = "none";
+        player.allow = "autoplay";
+        player.src = "https://www.youtube.com/embed/nHDlG7Gjs?start=22&autoplay=1&loop=1&playlist=nHDlG7Gjs";
+        document.body.appendChild(player);
+        musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+      } else {
+        // Toggle player
+        if (player.src.includes('autoplay=1')) {
+          player.src = player.src.replace('autoplay=1', 'autoplay=0');
+          musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+          player.src = player.src.replace('autoplay=0', 'autoplay=1');
+          musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+      }
+    });
+  });
+</script>
+
 ## About Me
 
 Detail-oriented Automation Architect and DevOps Engineer with a proven track record in building scalable test automation frameworks and optimizing CI/CD pipelines for cloud-native applications. Specialized in integrating AI-driven solutions to enhance testing efficiency, reduce manual intervention, and accelerate software delivery.
