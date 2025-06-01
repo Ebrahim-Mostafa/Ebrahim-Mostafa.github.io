@@ -180,7 +180,7 @@ I'm passionate about leveraging automation to deliver high-quality, secure, and 
 I'm always open to discussing new projects, opportunities, or partnerships.
 
 <div class="contact-form">
-  <form action="https://formspree.io/f/your-formspree-id" method="POST">
+  <form action="https://formspree.io/f/xkgbnwzy" method="POST">
     <div class="form-group">
       <input type="text" name="name" placeholder="Your Name" required>
     </div>
