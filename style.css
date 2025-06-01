@@ -1,0 +1,269 @@
+/* Main styles for personal website */
+:root {
+  --primary-color: #0366d6;
+  --secondary-color: #24292e;
+  --text-color: #24292e;
+  --light-bg: #f6f8fa;
+  --border-color: #e1e4e8;
+  --timeline-color: #0366d6;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.header-container {
+  display: flex;
+  align-items: center;
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 40px;
+}
+
+.profile-image img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+}
+
+.header-content {
+  margin-left: 30px;
+}
+
+.header-content h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+}
+
+.header-content h2 {
+  margin: 5px 0 15px;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--primary-color);
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Skills section */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.skill-category {
+  flex: 1;
+  min-width: 250px;
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.skill-category h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.skill-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+}
+
+/* Timeline styles */
+.timeline {
+  position: relative;
+  margin: 40px 0;
+  padding-left: 30px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: var(--timeline-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -39px;
+  top: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--timeline-color);
+  border: 4px solid white;
+}
+
+.timeline-content {
+  background-color: var(--light-bg);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: var(--primary-color);
+}
+
+.timeline-content h4 {
+  margin: 5px 0;
+  font-weight: 500;
+}
+
+.timeline-date {
+  font-style: italic;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+/* Project cards */
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.project-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  margin-bottom: 15px;
+}
+
+.project-header h3 {
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.project-company {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.project-tech span {
+  background-color: var(--light-bg);
+  border-radius: 4px;
+  padding: 3px 8px;
+  font-size: 0.8rem;
+}
+
+/* Contact form */
+.contact-form {
+  max-width: 600px;
+  margin: 30px 0;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  min-height: 150px;
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+  background-color: #0256b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .header-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  
+  .skills-container {
+    flex-direction: column;
+  }
+  
+  .projects-container {
+    grid-template-columns: 1fr;
+  }
+}

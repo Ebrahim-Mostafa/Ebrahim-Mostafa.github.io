@@ -1,0 +1,20 @@
+# Site settings
+title: Ebrahim Mostafa | Senior SDET
+description: Personal website of Ebrahim Mostafa, Senior Software Developer Engineer in Test
+url: "https://ebrahim-mostafa.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+
+# Custom settings
+github_username: Ebrahim-Mostafa
+linkedin_username: ebrahim-mostafa
+email: ebrahim.mostafa.1993@gmail.com
+
+# Google Analytics
+google_analytics: # Add your tracking ID here
