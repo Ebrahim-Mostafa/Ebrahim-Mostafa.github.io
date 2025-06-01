@@ -193,7 +193,8 @@ I'm always open to discussing new projects, opportunities, or partnerships.
     <button type="submit">Send Message</button>
   </form>
 </div>
-<!-- Background Music Player Script -->
+
+<!--
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const musicToggle = document.getElementById('musicToggle');
@@ -203,7 +204,6 @@ I'm always open to discussing new projects, opportunities, or partnerships.
       e.preventDefault();
       
       if (!player) {
-        // Create player if it doesn't exist
         player = document.createElement('iframe');
         player.width = "0";
         player.height = "0";
@@ -213,12 +213,46 @@ I'm always open to discussing new projects, opportunities, or partnerships.
         document.body.appendChild(player);
         musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
       } else {
-        // Toggle player
         if (player.src.includes('autoplay=1')) {
           player.src = player.src.replace('autoplay=1', 'autoplay=0');
           musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
         } else {
           player.src = player.src.replace('autoplay=0', 'autoplay=1');
+          musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+      }
+    });
+  });
+</script>
+-->
+
+<!-- Background Music Player Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const musicToggle = document.getElementById('musicToggle');
+    let player = null;
+    let isPlaying = false;
+    
+    musicToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (!player) {
+        // Create audio player if it doesn't exist
+        player = new Audio('/assets/audio/Mahrgan.Bo3Bo3.Daraty-MaTb3aa.Com.mp3');
+        player.loop = true;
+        player.volume = 0.7; // Set initial volume to 70%
+        player.play();
+        isPlaying = true;
+        musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+      } else {
+        // Toggle player
+        if (isPlaying) {
+          player.pause();
+          isPlaying = false;
+          musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+          player.play();
+          isPlaying = true;
           musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
         }
       }
