@@ -3,11 +3,6 @@ layout: default
 title: Ebrahim Mostafa | Senior SDET
 ---
 
-<!-- Background Music (Hidden) -->
-<div style="display:none">
-  <iframe id="backgroundMusic" width="0" height="0" src="https://www.youtube.com/watch?v=nHDlG3G7Gjs&t=22s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
-
 <div class="header-container">
   <div class="profile-image">
     <img src="https://via.placeholder.com/150" alt="Ebrahim Mostafa" />
@@ -20,42 +15,10 @@ title: Ebrahim Mostafa | Senior SDET
       <a href="https://github.com/Ebrahim-Mostafa/" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://gitlab.com/ebrahim.mostafa.1993" target="_blank"><i class="fab fa-gitlab"></i></a>
       <a href="mailto:ebrahim.mostafa.1993@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="#" id="musicToggle" title="Play/Pause Background Music"><i class="fas fa-music"></i></a>
     </div>
   </div>
 </div>
-
-<!-- Add this at the bottom of your file, just before the closing </div> of the contact form section -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const musicToggle = document.getElementById('musicToggle');
-    let player = null;
-    
-    musicToggle.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      if (!player) {
-        // Create player if it doesn't exist
-        player = document.createElement('iframe');
-        player.width = "0";
-        player.height = "0";
-        player.style.display = "none";
-        player.allow = "autoplay";
-        player.src = "https://www.youtube.com/embed/nHDlG7Gjs?start=22&autoplay=1&loop=1&playlist=nHDlG7Gjs";
-        document.body.appendChild(player);
-        musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
-      } else {
-        // Toggle player
-        if (player.src.includes('autoplay=1')) {
-          player.src = player.src.replace('autoplay=1', 'autoplay=0');
-          musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
-        } else {
-          player.src = player.src.replace('autoplay=0', 'autoplay=1');
-          musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
-        }
-      }
-    });
-  });
-</script>
 
 ## About Me
 
@@ -230,3 +193,35 @@ I'm always open to discussing new projects, opportunities, or partnerships.
     <button type="submit">Send Message</button>
   </form>
 </div>
+<!-- Background Music Player Script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const musicToggle = document.getElementById('musicToggle');
+    let player = null;
+    
+    musicToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (!player) {
+        // Create player if it doesn't exist
+        player = document.createElement('iframe');
+        player.width = "0";
+        player.height = "0";
+        player.style.display = "none";
+        player.allow = "autoplay";
+        player.src = "https://www.youtube.com/embed/nHDlG3G7Gjs?start=22&autoplay=1&loop=1&playlist=nHDlG3G7Gjs";
+        document.body.appendChild(player);
+        musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+      } else {
+        // Toggle player
+        if (player.src.includes('autoplay=1')) {
+          player.src = player.src.replace('autoplay=1', 'autoplay=0');
+          musicToggle.innerHTML = '<i class="fas fa-volume-mute"></i>';
+        } else {
+          player.src = player.src.replace('autoplay=0', 'autoplay=1');
+          musicToggle.innerHTML = '<i class="fas fa-volume-up"></i>';
+        }
+      }
+    });
+  });
+</script>
