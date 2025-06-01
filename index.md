@@ -5,7 +5,7 @@ title: Ebrahim Mostafa | Senior SDET
 
 <div class="header-container">
   <div class="profile-image">
-    <img src="https://via.placeholder.com/150" alt="Ebrahim Mostafa" />
+    <img src="assets/images/profile.jpg" alt="Ebrahim Mostafa" />
   </div>
   <div class="header-content">
     <h1>Ebrahim Mostafa</h1>
